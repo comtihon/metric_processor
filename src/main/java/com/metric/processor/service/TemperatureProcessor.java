@@ -67,6 +67,7 @@ public class TemperatureProcessor implements InitializingBean {
     }
 
     private void countAndFire(TemperatureDTO metric) {
+        LOGGER.debug("Count warning for metric: '{}'", metric);
         int counter = redisTemplate.opsForValue().increment(metric.getSensorUuid(), 1).intValue();
         if (counter == config.getEventsToFire()) {
             sender.send(new EventDTO(metric.getSensorUuid(), metric.getTemperature(), metric.getAt()));

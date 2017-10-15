@@ -24,4 +24,14 @@ public class EventDTO {
     public double getTemperature() {
         return temperature;
     }
+
+    @Override
+    public String toString() {
+        return "EventDTO{" +
+                "sensorUuid='" + sensorUuid + '\'' +
+                ", temperature=" + temperature +
+                ", at=" + at +
+                ", type=" + type +
+                '}';
+    }
 }

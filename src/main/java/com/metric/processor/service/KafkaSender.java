@@ -19,7 +19,7 @@ public class KafkaSender {
     private KafkaConfig config;
 
     public void send(EventDTO event) {
-        LOGGER.debug("fire event: '{}'", event);
+        LOGGER.debug("Fire event: '{}'", event);
         kafkaTemplate.send(config.getEventsTopic(), event);
     }
 }
