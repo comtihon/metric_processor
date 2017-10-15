@@ -1,4 +1,4 @@
-# Metrics Processor
+# Metrics Processor [![Build Status](https://travis-ci.org/comtihon/metric_processor.svg?branch=master)](https://travis-ci.org/comtihon/metric_processor)
 Service for creating events from metrics.  
 It creates an event if temperature metrics exceed value, set in configuration several times.  
 Number of times is also configurable.  
