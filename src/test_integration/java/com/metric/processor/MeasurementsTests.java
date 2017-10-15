@@ -72,7 +72,7 @@ public class MeasurementsTests {
         latch = new CountDownLatch(1);
         for (int i = 0; i < 3; i++)
             template.sendDefault(new TemperatureDTO("uuid6", 100));
-        latch.await(1000, TimeUnit.MILLISECONDS);
+        latch.await(2000, TimeUnit.MILLISECONDS);
         Assert.assertEquals(0, latch.getCount());
         Assert.assertEquals(1, events.size());
         EventDTO event = events.get(0);
