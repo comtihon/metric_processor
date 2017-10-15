@@ -55,7 +55,7 @@ public class MeasurementsTests {
         });
         container.start();
 
-        redisServer = new RedisServer(6379);
+        redisServer = new RedisServer(60379);
         redisServer.start();
 
         ContainerTestUtils.waitForAssignment(container, embeddedKafka.getPartitionsPerTopic());

@@ -33,7 +33,7 @@ public class CountersTest {
 
     @BeforeClass
     public static void setUp() throws Exception {
-        redisServer = new RedisServer(6379);
+        redisServer = new RedisServer(60379);
         redisServer.start();
     }
 
