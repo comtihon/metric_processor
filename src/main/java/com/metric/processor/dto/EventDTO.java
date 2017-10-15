@@ -4,16 +4,16 @@ import java.util.Date;
 
 public class EventDTO {
     private String sensorUuid;
-    private double value;
+    private double temperature;
     private Date at = new Date();
     private EventType type = EventType.TEMPERATURE_EXCEEDED;
 
     public EventDTO() {
     }
 
-    public EventDTO(String sensorUuid, double value, Date date) {
+    public EventDTO(String sensorUuid, double temperature, Date date) {
         this.sensorUuid = sensorUuid;
-        this.value = value;
+        this.temperature = temperature;
         this.at = date;
     }
 
@@ -21,7 +21,7 @@ public class EventDTO {
         return sensorUuid;
     }
 
-    public double getValue() {
-        return value;
+    public double getTemperature() {
+        return temperature;
     }
 }

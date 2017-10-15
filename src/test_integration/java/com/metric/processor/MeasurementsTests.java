@@ -77,7 +77,7 @@ public class MeasurementsTests {
         Assert.assertEquals(1, events.size());
         EventDTO event = events.get(0);
         Assert.assertEquals("uuid6", event.getSensorUuid());
-        Assert.assertEquals(100, event.getValue(), 0.1);
+        Assert.assertEquals(100, event.getTemperature(), 0.1);
     }
 
 }
