@@ -50,8 +50,8 @@ public class MeasurementsTests {
 
         container = new KafkaMessageListenerContainer<>(consumerFactory, containerProperties);
         container.setupMessageListener((MessageListener<String, EventDTO>) record -> {
-            latch.countDown();
             events.add(record.value());
+            latch.countDown();
         });
         container.start();
 
