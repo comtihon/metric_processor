@@ -19,7 +19,7 @@ for kafka and `spring.redis.host`, 'spring.redis.port' for redis.
 
 ### In docker
 
-    sudo ./gradlew build buildDocker
+    sudo ./gradlew build buildDocker -x test -x test_integration
     sudo docker run -t com.metric.processor
 
 ### In OS
