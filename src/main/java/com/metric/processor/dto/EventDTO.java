@@ -25,6 +25,14 @@ public class EventDTO {
         return temperature;
     }
 
+    public Date getAt() {
+        return at;
+    }
+
+    public EventType getType() {
+        return type;
+    }
+
     @Override
     public String toString() {
         return "EventDTO{" +
